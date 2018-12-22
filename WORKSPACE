@@ -15,6 +15,8 @@ NODEJS_VERSION="10.13.0"
 YARN_VERSION="1.12.1"
 ANGULAR_VERSION="7.1.0"
 
+# git commit on https://github.com/Toxicable/rules-ts-dont-use-this of the corresponding rules_typescript release
+# with our modification to tsconfig to make all ts compiles use `target = "esnext"`
 # 46c72600975a9254e7ea721e016ea7ef3795ce85 = 0.10.1
 # 567a58fb23c3006a7ec2ab6486097d8d2b5db284 = 0.15.3
 # c2664442c8c84ab159b3909edb629f2cabffc9b6 = 0.17.0
