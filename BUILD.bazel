@@ -1,0 +1,16 @@
+package(default_visibility = ["//visibility:public"])
+load("@build_bazel_rules_nodejs//:defs.bzl", "node_modules_filegroup")
+
+exports_files(["tsconfig.json"])
+
+alias(
+    name = "install",
+    actual = "@yarn//:yarn",
+)
+
+
+
+node_modules_filegroup(
+    name = "empty_node_modules",
+    packages = [],
+)

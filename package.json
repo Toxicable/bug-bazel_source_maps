@@ -1,0 +1,21 @@
+{
+  "name": "fabians_workplace",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "./postinstall.sh",
+    "go": "./node_modules/.bin/ibazel run apps/app -- --node_options=--inspect-brk"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/bazel": "7.1.0",
+    "@angular/compiler-cli": "7.1.0",
+    "@angular/compiler": "7.1.0",
+    "@angular/core": "7.1.0",
+    "@bazel/ibazel": "0.8.1",
+    "@bazel/typescript": "0.21.0",
+    "@types/node": "10.12.9",
+    "rxjs": "6.3.3",
+    "zone.js": "0.8.26",
+    "typescript": "3.1.1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+      "bazelbuild.vscode-bazel",
+      "esbenp.prettier-vscode",
+      "eg2.tslint",
+      "pkief.material-icon-theme",
+      "editorconfig.editorconfig",
+      "natewallace.angular2-inline"
+  ]
+}

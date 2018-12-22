@@ -1,0 +1,28 @@
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+load("//tools/bazel-rules:docker_image.bzl", "docker_image")
+
+NPM_DEPS = [
+  "@npm//@types/node",
+]
+
+ts_library(
+    name = "ts_server",
+    deps = [ ] + NPM_DEPS,
+    srcs = glob(["src/**/*.ts"]),
+)
+
+nodejs_binary(
+    name = "app",
+    data = ["//apps/app:ts_server"] + NPM_DEPS,
+    entry_point = "fabians_workplace/apps/app/src/main.js",
+)
+
+
+docker_image(
+  name = "image",
+  entry_point = "fabians_workplace/apps/app/src/main.js",
+  data = [":ts_server"] + NPM_DEPS,
+  repository = "fabians_workplace/app",
+)
+
